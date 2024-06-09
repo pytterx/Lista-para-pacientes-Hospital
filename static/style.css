@@ -1,0 +1,73 @@
+body {
+    background-color:  #b2cff5;
+    
+}
+
+
+.container-fluid {
+    background-color: rgb(168, 185, 226);
+    padding: 0px;
+    margin: 0px ;
+    width: 1340px;
+    
+}
+
+.container2-fluid {
+    background-color: #9ac5ff 60% 0%;
+
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+
+}
+
+.header-content img{
+    width: 100px;  /* so mudar o tamanho que vc quiser  */
+    height: 100px;
+    max-height: 100px;
+    order: 1;
+    margin-right: 10px;
+}
+
+.header-content h1 {
+    order: 2;
+    font-family:anton-regular {
+        font-family: "Anton", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }      
+}
+
+.search-bar {
+    width: 50%;
+    padding: 5px;
+}
+
+.header-icons i {
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.filter-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+}
+
+.table-section {
+    padding: 20px;
+}
+
+.mt-4 {
+    margin: 0px;
+    box-sizing: 0px;
+    
+    
+}
+
+.h1 {
+    color: black;
+    order: 2;
+}

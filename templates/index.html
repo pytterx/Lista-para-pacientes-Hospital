@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="header-content">
+            <h1 class="mr-3">Policlinica De Magé</h1>
+            <img src="/static/logo1.png" alt="Logo">
+        </div>
+    </div>
+    <div class="container2-fluid">
+        <main class="mt-4">
+            <section class="filter-section">
+                <form method="post" action="/">
+                    <div class="form-group">
+                        <label for="name">Nome</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="sintoma">Sintomas</label>
+                        <input type="text" class="form-control" id="sintoma" name="sintoma" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="numero">Numero de contato</label>
+                        <input type="tel" class="form-control" id="numero" name="numero" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="data_de_naicimento">Data de nascimento</label>
+                        <input type="date" class="form-control" id="data_de_naicimento" name="data_de_naicimento" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Incluir</button>
+                </form>
+            </section>
+
+            <div>
+                <p>Numero de registro de pacientes: {{ data_list|length }}</p>
+            </div>
+
+            <section class="table-section mt-4">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Nome</th>
+                            <th>Sintoma</th>
+                            <th>Numero de contato</th>
+                            <th>Data de nascimento</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for data in data_list %}
+                        <tr>
+                            <td>{{ data.id }}</td>
+                            <td>{{ data.name }}</td>
+                            <td>{{ data.sintoma }}</td>
+                            <td>{{ data.numero }}</td>
+                            <td>{{ data.data_de_naicimento }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
